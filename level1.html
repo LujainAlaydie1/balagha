@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>بلاغة</title>
+        <link rel="stylesheet" href="Styles/level1.css">
+        <script src="Scripts/d&d.js"></script>
+    </head>
+    <body>
+        <div class="page-container">
+        <div class="container">
+            <div class="words-container">
+                <div class="word" draggable="true" ondragstart="drag(event)" id="word3">مغزاها</div>
+            <div class="word" draggable="true" ondragstart="drag(event)" id="word1">درر</div>
+            <div class="word" draggable="true" ondragstart="drag(event)" id="word2">عِبر</div>
+        </div>
+    </div>
+    
+        <div class="container">
+            <div class="meanings-container">
+
+                <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="عِبر">
+                    <span id="meaning2">تذكرة، وعظة يُتَّعظ بها</span>
+                </div>
+
+            <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="درر">
+                <span id="meaning1">اللآلئ الكبيرة </span>
+            </div>
+
+
+
+            <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="مغزاها">
+                <span id="meaning3">مقصد الأمر ومدلوله.</span>
+            </div>
+        </div>
+    </div>
+    
+        <div class="message" id="success">شكرًا! لقد قمت بالمطابقة بنجاح</div>
+        <div class="message" id="fail">عذرًا، حاول مرة أخرى.</div>
+    
+    </div>
+
+       
+    </body>
+    
+
+</html>
+
+
+ 
+</html>
+

@@ -1,0 +1,50 @@
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Use the full height of the viewport */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Arrange containers vertically */
+}
+
+.words-container, .meanings-container {
+    display: flex;
+    flex-direction: column; /* Arrange items in each container vertically */
+    margin: 10px;
+}
+
+.word, .meaning {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    user-select: none;
+}
+
+.word {
+    background-color: #3498db;
+    color: #fff;
+    cursor: move;
+}
+
+.meaning {
+    background-color: #2ecc71;
+    color: #fff;
+    border: 2px solid #2980b9;
+    position: relative;
+}
+
+.meaning span {
+    pointer-events: none; /* Disable pointer events on the span element */
+}
+
+.message {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+}
