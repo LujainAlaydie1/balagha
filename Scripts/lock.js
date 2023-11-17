@@ -4,8 +4,8 @@ $(document).ready(function () {
     });
   });
 
-  function onBtnClickHandle(){
+  function onBtnClickHandle(location){
     setTimeout(function(){ 
-    window.location="\song.html"
+    window.location= location 
  }, 300);
 }

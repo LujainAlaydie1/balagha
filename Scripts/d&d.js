@@ -1,11 +1,12 @@
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.textContent);
-    ev.dataTransfer.setData("id", ev.target.id);
-}
+ function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.textContent);
+            ev.dataTransfer.setData("id", ev.target.id);
+        }
 
-function allowDrop(ev) {
-    ev.preventDefault();
-}
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        var droppedCount = 0;
 
 function drop(ev) {
     ev.preventDefault();
@@ -21,10 +22,22 @@ function drop(ev) {
             target.querySelector('span').textContent = data;
             document.getElementById(spanId).style.color = "#fff";
             document.getElementById(id).style.display = "none";
-        }
+            droppedCount++;
 
-        checkAllMatched();
+            if (droppedCount === 3) {
+                setTimeout(checkAllMatched, 100);
+            }
+        }
     }
+}
+
+// Add this to your existing JavaScript
+function openModal() {
+    location.href = "#myModal"; // Redirect to the modal's ID in the URL
+}
+
+function closeModal() {
+    location.href = "keytoLevel2.html"; // Redirect to the main page to close the modal
 }
 
 function checkAllMatched() {
@@ -33,13 +46,12 @@ function checkAllMatched() {
 
     meanings.forEach(function (span) {
         if (span.textContent !== span.getAttribute("data-correct")) {
-            allMatched = false;
+            allMatched = true;
         }
     });
 
     if (allMatched) {
-        document.getElementById("success").style.display = "block";
-        document.getElementById("fail").style.display = "none";
+        openModal();
     }
 }
 
