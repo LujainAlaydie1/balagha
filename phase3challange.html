@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاغة</title>
+    <link rel="stylesheet" href="Styles/level3theednd.css">
+    <!-- Link your CSS file here -->
+</head>
+<style>
+    /* Add your custom styles here */
+    h1 {
+        font-size: 3em; /* Adjust the font size as needed */
+        text-align: center;
+        margin-top: 10px 0;
+        /* Adjust the margin as needed */
+        color: aliceblue;
+    }
+    img {
+            display: block;
+            margin: auto; /* Center the image */
+            margin-top: 20px; /* Adjust the margin as needed */
+            max-width: 100%; /* Make sure the image doesn't exceed its container */
+            height: auto; /* Maintain the image's aspect ratio */
+        }
+
+</style>
+
+<body>
+    <h1>قم بترتيب الجمل التاليه لتكون قصتك الخاصه </h1>
+    <div class="page-container">
+        <div class="container">
+            <div class="words-container">
+                <div class="word" draggable="true" ondragstart="drag(event)" id="word3">في يومٍ من الأيام، قررت ليلى أن تعبر نهرًا عميقًا، باحثةً عن درر خفية.</div>
+                
+                <audio class="audio-button" controls>
+                    <source src="audio/audio2.mp4" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="word" draggable="true" ondragstart="drag(event)" id="word1">وفي رحلتها، اكتشفت قنينة صغيرة تحمل عبرةً رائعة.</div>
+                <audio class="audio-button" controls>
+                    <source src="audio/audio3.mp4" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="word" draggable="true" ondragstart="drag(event)" id="word2">حيث كان مغزاها أن الصداقة هي أعظم درر يمكن العثور عليها.</div>
+                <audio class="audio-button" controls>
+                    <source src="audio/audio4.mp4" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="word" draggable="true" ondragstart="drag(event)" id="word4">في قرية تُدعى بلاغة، كانت هناك فتاة اسمها ليلى.</div>
+                <audio class="audio-button" controls>
+                    <source src="audio/audio1.mp4" type="audio/mp4">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="meanings-container">
+
+                <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="في قرية تُدعى بلاغة، كانت هناك فتاة اسمها ليلى.">
+                    <span id="meaning2">الجمله الاولى</span>
+                    
+                </div>
+
+                <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="في يومٍ من الأيام، قررت ليلى أن تعبر نهرًا عميقًا، باحثةً عن درر خفية.">
+                    <span id="meaning1">الجملة الثانية</span>
+                </div>
+
+                <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="وفي رحلتها، اكتشفت قنينة صغيرة تحمل عبرةً رائعة.">
+                    <span id="meaning3">الجملة الثالثة</span>
+                </div>
+                <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="حيث كان مغزاها أن الصداقة هي أعظم درر يمكن العثور عليها.">
+                    <span id="meaning4">الجمله الرابعة</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="message" id="success">شكرًا! لقد قمت بالمطابقة بنجاح</div>
+        <div class="message" id="fail">عذرًا، حاول مرة أخرى.</div>
+    </div>
+
+    <!-- Add this after your existing HTML -->
+<div id="myModal" class="overlay">
+    <div class="popup">
+        <h2 id="modalTitle">مبروك!!</h2>
+        <a class="close" href="#" onclick="closeModal()">&times;</a>
+        <div class="content">
+            <p>لقد حليتها كلها بطريقة صحيحة!!</p>
+        </div>
+        <audio id="clapAudio" src="audio/clap.mp3"></audio>
+        <audio id="sadAudio" src="audio/sad.mp3"></audio>
+    </div>
+</div>
+
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var draggedElement = document.getElementById(data);
+
+        // Check if the drop is correct
+        var correctAnswer = ev.target.getAttribute("data-correct");
+        if (correctAnswer && correctAnswer === draggedElement.innerHTML) {
+            ev.target.appendChild(draggedElement);
+            document.getElementById("success").style.display = "block";
+            document.getElementById("fail").style.display = "none";
+            showModal(true);
+        } else {
+            document.getElementById("success").style.display = "none";
+            document.getElementById("fail").style.display = "block";
+            showModal(false);
+        }
+    }
+
+    function showModal(isCorrect) {
+        var modal = document.getElementById("myModal");
+        var modalTitle = document.getElementById("modalTitle");
+        var clapAudio = document.getElementById("clapAudio");
+        var sadAudio = document.getElementById("sadAudio");
+
+        if (isCorrect) {
+            modalTitle.innerHTML = "مبروك!!";
+            clapAudio.play();
+        } else {
+            modalTitle.innerHTML = "عذرًا!!";
+            sadAudio.play();
+        }
+
+        modal.style.display = "block";
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+</script>
+</body>
+</html>
