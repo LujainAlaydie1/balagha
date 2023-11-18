@@ -1,76 +1,28 @@
 body {
-  padding: 60px;
+  margin: 0;
+  padding: 0;
+  /* background-size: cover;
+ background: url('../images/Village.png') no-repeat center center; */
 
 }
 
-.container {
-  display: flex;
-  align-items: center; /* Center items vertically */
-}
-
-
-.cartoon {
-  text-align: center;
-}
-
-.bubble {
-  position: relative;
-  display: inline-block;
-  margin: 20px;
-  text-align: center;
-  font-family: "Press Start 2P", cursive;
-  font-size: 16px;
-  line-height: 1.3em;
-  background-color: #fff;
-  color: #000;
-  padding: 12px;
-  box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
-  box-sizing: border-box;
-  width: 300px; /* Adjust this value as needed */
-  height: auto; /* Allow the height to adjust based on content */
-  
-}
-  
-
-.bubble::after {
-  content: "";
-  display: block;
-  position: absolute;
-  box-sizing: border-box;
-}
-
-.bubble.mini {
-  width: 110px;
-  font-size: 16px;
-  padding: 4px;
-  font-family: monospace;
-}
-
-.bubble.medium {
-  width: 350px;
-}
-
-.bubble.large {
-  width: 560px;
-  font-size: 24px;
-  text-align: right;
-  text-transform: uppercase;
-  align-items: center;
+.bg{
+  background: url('../images/Village.png') 100% 100% no-repeat;;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
 }
 
 @media only screen and (max-width: 768px) {
-  .cartoon {
-    grid-template-columns: 1fr; /* Change to a single column for smaller screens */
-  }
 
-  .bubble {
-    width: 100%; /* Make the bubble full width on smaller screens */
-  }
 
-  .bubble.mini,
-  .bubble.medium,
-  .bubble.large {
-    width: 100%; /* Make different bubble sizes full width on smaller screens */
+  .bg{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
   }
 
   .picutres img {
@@ -80,18 +32,21 @@ body {
 
 .button {
   position: relative;
-  display: inline-block;
-  margin: 20px;
+  margin-bottom: 10px;
+  margin-right: 55%;
+  margin-left: 10%;
+  max-width: 500px;
+  overflow: hidden;
 }
 
 .button a {
-  color: white;
+  color: #0E4070;
   font-family: Helvetica, sans-serif;
   font-weight: bold;
   font-size: 36px;
   text-align: center;
   text-decoration: none;
-  background-color: #FFA12B;
+  background-color: #F2F5F8;
   display: block;
   position: relative;
   padding: 20px 40px;
@@ -100,9 +55,9 @@ body {
   text-shadow: 0px 1px 0px #000;
   filter: dropshadow(color=#000, offx=0px, offy=1px);
 
-  -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  -webkit-box-shadow: inset 0 1px 0 #F2F5F8, 0 10px 0 #D8D8D8;
+  -moz-box-shadow: inset 0 1px 0 #F2F5F8, 0 10px 0 #D8D8D8;
+  box-shadow: inset 0 1px 0 #F2F5F8, 0 10px 0 #D8D8D8;
 
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -111,11 +66,11 @@ body {
 
 .button a:active {
   top: 10px;
-  background-color: #F78900;
+  background-color: #F2F5F8;
 
-  -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-  -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
-  box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #D8D8D8;
+  -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #D8D8D8;
+  box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #D8D8D8;
 }
 
 .button:after {
@@ -133,134 +88,65 @@ body {
   border-radius: 5px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.bubble::after {
-  content: "";
-  display: block;
-  position: absolute;
-  box-sizing: border-box;
-  
-}
-.bubble.shadow {
-  box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000, 4px 12px rgba(0, 0, 0, 0.1), 12px 4px rgba(0, 0, 0, 0.1), 8px 8px rgba(0, 0, 0, 0.1);
-}
-.bubble.mini {
-  width: 110px;
-  font-size: 16px;
-  padding: 4px;
-  font-family: monospace;
-}
-.bubble.medium {
-  width: 350px;
-}
-.bubble.large {
-  width: 560px;
-  font-size: 24px;
-  text-align: right;
-  text-transform: uppercase;
-}
-.bubble.grow {
-  width: initial;
-}
-.bubble.top::after {
-  height: 4px;
-  width: 4px;
-  top: -8px;
-  left: 32px;
-  box-shadow: 0 -4px #000, 0 -8px #000, 0 -12px #000, 0 -16px #000, -4px -12px #000, -8px -8px #000, -12px -4px #000, -4px -4px #fff, -8px -4px #fff, -4px -8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
-}
-.bubble.right::after {
-  height: 4px;
-  width: 4px;
-  top: 84px;
-  right: -8px;
-  background: white;
-  box-shadow: 4px -4px #fff, 4px 0 #fff, 8px 0 #fff, 0 -8px #fff, 4px 4px #000, 8px 4px #000, 12px 4px #000, 16px 4px #000, 12px 0 #000, 8px -4px #000, 4px -8px #000, 0 -4px #fff;
-}
-.bubble.bottom::after {
-  height: 4px;
-  width: 4px;
-  bottom: -8px;
-  left: 32px;
-  box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
-}
-.bubble.left::after {
-  height: 4px;
-  width: 4px;
-  top: 20px;
-  left: -8px;
-  background: white;
-  box-shadow: -4px -4px #fff, -4px 0 #fff, -8px 0 #fff, 0 -8px #fff, -4px 4px #000, -8px 4px #000, -12px 4px #000, -16px 4px #000, -12px 0 #000, -8px -4px #000, -4px -8px #000, 0 -4px #fff;
-}
-
-.button{
-  position:relative;
-  display:inline-block;
-  margin:20px;
-  
-}
-
-.button a{
-  color:white;
-  font-family:Helvetica, sans-serif;
-  font-weight:bold;
-  font-size:36px;
-  text-align: center;
-  text-decoration:none;
-  background-color:#FFA12B;
-  display:block;
-  position:relative;
-  padding:20px 40px;
-  
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  text-shadow: 0px 1px 0px #000;
-  filter: dropshadow(color=#000, offx=0px, offy=1px);
-  
-  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
-  
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.button a:active{
-  top:10px;
-  background-color:#F78900;
-  
-  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
-  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
-}
-
-.button:after{
-  content:"";
-  height:100%;
-  width:100%;
-  padding:4px;
-  position: absolute;
-  bottom:-15px;
-  left:-4px;
-  z-index:-1;
-  background-color:#2B1800;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
 .pictures {
-  display: inline-block;
-  vertical-align: top; /* Align the image to the top of the container */
-  margin-left: 20px; /* Adjust the margin as needed */
-  
+  position: absolute;
+  bottom: 0;
+  right: 20%; 
 }
 
 .pictures img {
-  max-width: 150%;
+  
+  max-width: 100%;
   height: auto;
   display: inline-block;
+  width: 75%;
+  height: auto;
+  margin-bottom:0%
+}
+
+
+.ovall {
+  position: relative;
+  margin-bottom: 10px;
+  margin-right: 55%;
+  margin-left: 10%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.ovall:before {
+  content: '';
+  display: block;
+  padding-top: 75%; /* This creates a pseudo-element with a fixed aspect ratio (adjust as needed) */
+}
+
+.ovall img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire oval */
+}
+
+.ovall .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #0E4070; /* Adjust text color as needed */
+  font-size: 1.5vw; /* Use viewport width for responsive font size */
+
+}
+
+.sound{
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Adjust text color as needed */
+  font-size: 1.5vw; /* Use viewport width for responsive font size */
+
 }

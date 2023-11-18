@@ -1,9 +1,13 @@
 .center-screen {
     display: flex;
     justify-content: center;
-    align-items: top 50px;
+    align-items: center;
     text-align: center;
 
+
+}
+video{
+  top: 20%;
 }
 .button-group {
     display: flex; /* Use flexbox for the button group */
@@ -13,7 +17,6 @@
 
 .nextbtn{
     display: flex; /* Use flexbox for the button group */
-
     justify-content: center;
 
 }
@@ -123,10 +126,27 @@
     overflow: auto;
   }
   
+
+  .bg{
+    background: url('../images/songpic.png') 100% 100% no-repeat;;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+
   @media screen and (max-width: 700px){
     .popup{
       width: 70%;
     }
+      .bg{
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        min-height: 100vh;
+      }
   }
 
   #div1, #div2 {
@@ -137,3 +157,4 @@
     padding: 10px;
     border: 1px solid black;
   }
+

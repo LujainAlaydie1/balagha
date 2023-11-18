@@ -6,10 +6,15 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>بلاغة</title>
         <link rel="stylesheet" href="Styles/song.css">
+        <script src="Scripts/audio.js"></script>
+        <script src="https://kit.fontawesome.com/3245c9c71f.js" crossorigin="anonymous"></script>
+
 
     </head>
-
+    
     <body>
+        <div class="bg">
+
     <div class="center-screen">
         <video width="550" height="400" autoplay controls>
             <source src="videos/song.mp4" type="video/mp4">
@@ -30,6 +35,10 @@
                     <a class="close" href="#">&times;</a>
                     <div class="content">
                         تذكرة، وعظة يُتَّعظ بها.
+                        <div class="sound">
+                            <i onclick="toggleAudio('audio/reminder.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+                        </i> 
+                    </div>
                     </div>
                 </div>
             </div>
@@ -47,6 +56,10 @@
                         <a class="close" href="#">&times;</a>
                         <div class="content">
                             اللآلئ. الكبيرة.
+                            <div class="sound">
+                                <i onclick="toggleAudio('audio/bigPearls.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+                            </i>    
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,6 +77,11 @@
                         <a class="close" href="#">&times;</a>
                         <div class="content">
                             مقصد الأمر ومدلوله.
+                            <div class="sound">
+                                <i onclick="toggleAudio('audio/meaning.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+                            </i> 
+                        </div>
+ 
                         </div>
                     </div>
                 </div>
@@ -71,12 +89,13 @@
 
                 <div class="nextbtn" ontouchstart="">
                     <div class="button">
-                       <a href="level1.html">--&gt</a>
+                       <a href="level1.html">انتقل للتحدي</a>
                     </div>
                 </div>
             </div>
 
 
+        </div>
 
 
 
