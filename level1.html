@@ -7,15 +7,36 @@
         <title>بلاغة</title>
         <link rel="stylesheet" href="Styles/level1.css">
         <script src="Scripts/d&d.js"></script>
+        <script src="Scripts/audioWadi.js"></script>
+        <script src="https://kit.fontawesome.com/3245c9c71f.js" crossorigin="anonymous"></script>
 
     </head>
     <body>
+        <div class="bg">
+
+            <h1>اختار المعنى الصحيح لكل كلمة </h1>
+
         <div class="page-container">
+
+            
         <div class="container">
             <div class="words-container">
                 <div class="word" draggable="true" ondragstart="drag(event)" id="word3">مغزاها</div>
+                <div class="sound">
+                    <i onclick="toggleAudio('audio/meaningWord.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+                </i>    
+                </div>
+
             <div class="word" draggable="true" ondragstart="drag(event)" id="word1">درر</div>
+            <div class="sound">
+                <i onclick="toggleAudio('audio/pearls.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+            </i>    
+            </div>
             <div class="word" draggable="true" ondragstart="drag(event)" id="word2">عِبر</div>
+            <div class="sound">
+                <i onclick="toggleAudio('audio/reminderWord.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+            </i>    
+            </div>
         </div>
     </div>
     
@@ -24,17 +45,26 @@
 
                 <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="عِبر">
                     <span id="meaning2">تذكرة، وعظة يُتَّعظ بها</span>
-                    
                 </div>
-
+                <div class="sound">
+                    <i onclick="toggleAudio('audio/reminder.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+                </i>    
+                </div>
             <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="درر">
                 <span id="meaning1">اللآلئ الكبيرة </span>
             </div>
-
+            <div class="sound">
+                <i onclick="toggleAudio('audio/bigPearls.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+            </i>    
+            </div>
 
 
             <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="مغزاها">
                 <span id="meaning3">مقصد الأمر ومدلوله.</span>
+            </div>
+            <div class="sound">
+                <i onclick="toggleAudio('audio/meaning.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+            </i>    
             </div>
         </div>
     </div>
@@ -53,6 +83,7 @@
             <p>لقد حليتها كلها بطريقة صحيحة!!</p>
         </div>
     </div>
+</div>
 </div>
     </body>
     

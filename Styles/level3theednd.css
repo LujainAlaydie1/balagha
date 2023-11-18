@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin-bottom: 10px;
     overflow: hidden;
-    background-image: url('/Users/maryam/balagha/images/backgroundednd.png'); /* Replace with the actual path to your image */
+    background-image: url('../images/backgroundednd.png'); /* Replace with the actual path to your image */
     background-size: cover;
     background-position: contain;
     background-color: bisque;

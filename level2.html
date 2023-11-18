@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>بلاغة</title>
+        <link rel="stylesheet" href="Styles/level2.css">
+        <script src="Scripts/wadi2.js"></script>
+        <script src="Scripts/audioWadi.js"></script>
+        <script src="https://kit.fontawesome.com/3245c9c71f.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="bg">
+
+            <h2>في وادي الكلمات السحرية، يمكنك أيضًا بناء ترتيبك الخاص، استخدم كلماتك كأدوات سحرية لتخلق عوالم جديدة وتحكي قصصًا لا تُنسى.</h2>
+
+        <div class="page-container">
+
+            
+        <div class="container">
+            <div class="words-container">
+                <div class="word" draggable="true" ondragstart="drag(event)" id="word3">مغزاها</div>
+                <div class="sound">
+                    <i onclick="toggleAudio('audio/meaningWord.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+                </i>    
+                </div>
+
+            <div class="word" draggable="true" ondragstart="drag(event)" id="word1">الدرر</div>
+            <div class="sound">
+                <i onclick="toggleAudio('audio/pearls.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+            </i>    
+            </div>
+            <div class="word" draggable="true" ondragstart="drag(event)" id="word2">العِبَرُ</div>
+            <div class="sound">
+                <i onclick="toggleAudio('audio/reminderWord.m4a')" class="fa-solid fa-volume-high fa-solid"></i>
+            </i>    
+            </div>
+        </div>
+    </div>
+    
+        <div class="container">
+            <div class="meanings-container">
+
+                <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="الدرر">
+                    <span id="meaning2"> لمعت نجوم السماء كـ (ــــ)</span>
+                </div>
+
+            <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="مغزاها">
+                <span id="meaning1"> كل قصة لها (ــــ)، فاستمع جيدًا واستفد من العبرة التي تحملها.</span>
+            </div>
+
+
+            <div class="meaning" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="العِبَرُ">
+                <span id="meaning3"> (ــــ)  تُعلمُنا دروسًا قيمة في الحياة</span>
+            </div>
+
+        </div>
+    </div>
+    
+        <div class="message" id="success">شكرًا! لقد قمت بالمطابقة بنجاح</div>
+        <div class="message" id="fail">عذرًا، حاول مرة أخرى.</div>
+    
+    </div>
+
+<!-- Add this after your existing HTML -->
+<div id="myModal" class="overlay">
+    <div class="popup">
+        <h2>مبروك!!</h2>
+        <a class="close" href="#" onclick="closeModal()">&times;</a>
+        <div class="content">
+            <p>لقد حليتها كلها بطريقة صحيحة!!</p>
+        </div>
+    </div>
+</div>
+</div>
+    </body>
+    
+
+</html>
+
+
+ 
+</html>
+
