@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles/bag.CSS">
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="background-image"></div>
+    <div id="audio-icon"></div>
+    <div class="button-container">
+      <a href="level3ketnote.html" class="circular-button"><img src=""></a>
+      <a href="keytoLevel2.html" class="circular-button"><img src=""></a>
+      <a href="keytoSong.html" class="circular-button "><img src=""></a>
+  </div>
+
+
+  <audio autoplay id="audio" src="audio/bag.m4a" type="audio/mp4"></audio>
+  <script>
+    const audio = document.getElementById('audio');
+    const audioIcon = document.getElementById('audio-icon');
+    
+    let isPlaying = false;
+    
+    audioIcon.addEventListener('click', toggleAudio);
+    
+    function toggleAudio() {
+      if (isPlaying) {
+        audio.pause();
+        isPlaying = false;
+      } else {
+        audio.play();
+        isPlaying = true;
+      }
+    }</script>
+  
+</body>
+</html>
